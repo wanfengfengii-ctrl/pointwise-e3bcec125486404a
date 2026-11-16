@@ -1,0 +1,22 @@
+[
+  {
+    "name": "accepted_before_ack",
+    "events": [["L","l0",7],["L","l1",7],["L","l2",9],["R","r0",7],["R","r1",7],["L","l3",8],["R","r2",8],["END","L"],["END","R"]],
+    "actions": [["read",4],["offer",0],["accept",0],["request"],["read",1],["ack",0],["finish"]]
+  },
+  {
+    "name": "offered_not_accepted",
+    "events": [["L","a",1],["R","x",1],["L","b",1],["R","y",1],["END","R"],["END","L"]],
+    "actions": [["read",3],["offer",0],["request"],["finish"]]
+  },
+  {
+    "name": "late_right_match",
+    "events": [["L","u",4],["R","p",5],["L","v",5],["R","q",4],["END","R"],["L","w",6],["END","L"]],
+    "actions": [["read",2],["request"],["read",2],["finish"]]
+  },
+  {
+    "name": "right_ended_partial_null",
+    "events": [["L","n0",3],["L","n1",3],["R","z",4],["END","R"],["END","L"]],
+    "actions": [["read",5],["offer",0],["accept",0],["request"],["finish"]]
+  }
+]
